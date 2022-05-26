@@ -99,6 +99,7 @@ hr {
   align-items: center;
   padding-right: 25px;
   border-right: 3px solid black;
+  cursor: pointer;
 }
 
 .TopNav-item-2 {
@@ -111,6 +112,11 @@ hr {
   border: 2px solid rgba(51, 38, 38, 0.249);
   border-radius: 100%;
 }
+
+.TopNav-item-2 {
+  cursor: pointer;
+}
+
 h2 {
   font-weight: 500;
 }
