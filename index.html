@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AayDash</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <div class="logo">
+          <img src="logo.png" alt="" height="30px" />
+          <h3>AayDash</h3>
+        </div>
+
+        <ul class="list">
+          <li>
+            <p class="select">
+              <i class="bx bxs-pie-chart-alt-2"></i>
+              <span class="link_name">Overview</span>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <i class="bx bx-shield-quarter"></i>
+              <span class="link_name">Workers</span>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <i class="bx bx-bulb"></i>
+              <span class="link_name">Employer</span>
+            </p>
+          </li>
+
+          <hr />
+
+          <li>
+            <p class="setting">
+              <i class="bx bx-cog"></i>
+              <span class="link_name">Settings</span>
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="container-item">
+        
+        <div class="TopNav">
+          <h2>Overview</h2>
+
+
+          <div class="TopNav-side">
+            <div class="TopNav-item-1"><p><i class="bx bx-search"></i></p>
+                <p><i class="bx bx-bell"></i></p></div>
+
+            <div class="TopNav-item-2"><span>Sagar Nirwal</span>
+                <img src="user.jpg" alt="logo" height="50px"></div>
+          </div>
+        </div>
+
+
+        <div class="grid-list">
+          <div class="my-grid"><p>Hiring</p> <h4>60000</h4></div>
+          <div class="my-grid"><p>Pending</p> <h4>1600</h4></div>
+          <div class="my-grid"><p>Workers</p> <h4>4300000</h4></div>
+          <div class="my-grid"><p>Employer</p> <h4>64000</h4></div>
+        </div>
+        
+        
+        <div class="chart-area">
+          <div id="chart" class="chart1"></div>
+          <div class="chart-list">
+          <div class="chart-grid"><p>Bookings</p><h4>449</h4></div>
+          <div class="chart-grid"><p>Pending</p> <h4>26</h4></div>
+          <div class="chart-grid"><p>Ticktes</p> <h4>33</h4></div>
+          <div class="chart-grid"><p>Users</p><h4>4000</h4></div>
+          <div class="chart-grid"><p>IT Health</p><h4>10/10</h4></div></div>
+        </div>
+
+        <div class="tickets-area">
+          <div class="tickets">
+            <h2>Unresolved tickets</h2>
+            <a>View details</a>
+          </div>
+          <div class="tickets-box">
+            <div class="tickets-list">
+              <h3>Waiting on Feature Request</h3>
+              <p>4238</p>
+            </div>
+            <div class="tickets-list">
+              <h3>Awaiting Customer Response</h3>
+              <p>1005</p>
+            </div>
+            <div class="tickets-list">
+              <h3>Awaiting Developer Fix</h3>
+              <p>914</p>
+            </div>
+            <div class="tickets-list">
+              <h3>Pending</h3>
+              <p>281</p>
+            </div>
+          </div>
+        </div>
+
+        
+
+
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script> var options = {
+      series: [{
+      name: 'Sales',
+      data: [4, 3, 10, 9, 29, 19, 22, 9, 12, 7, 19, 5, 13, 9, 17, 2, 7, 5]
+    }],
+      chart: {
+      height: 350,
+      type: 'line',
+    },
+    forecastDataPoints: {
+      count: 7
+    },
+    stroke: {
+      width: 5,
+      curve: 'smooth'
+    },
+    xaxis: {
+      type: 'datetime',
+      categories: ['1/11/2000', '2/11/2000', '3/11/2000', '4/11/2000', '5/11/2000', '6/11/2000', '7/11/2000', '8/11/2000', '9/11/2000', '10/11/2000', '11/11/2000', '12/11/2000', '1/11/2001', '2/11/2001', '3/11/2001','4/11/2001' ,'5/11/2001' ,'6/11/2001'],
+      tickAmount: 10,
+      labels: {
+        formatter: function(value, timestamp, opts) {
+          return opts.dateFormatter(new Date(timestamp), 'dd MMM')
+        }
+      }
+    },
+    title: {
+      text: 'Forecast',
+      align: 'left',
+      style: {
+        fontSize: "16px",
+        color: '#666'
+      }
+    },
+    fill: {
+      type: 'gradient',
+      gradient: {
+        shade: 'dark',
+        gradientToColors: [ '#FDD835'],
+        shadeIntensity: 1,
+        type: 'horizontal',
+        opacityFrom: 1,
+        opacityTo: 1,
+        stops: [0, 100, 100, 100]
+      },
+    },
+    yaxis: {
+      min: -10,
+      max: 40
+    }
+    };
+
+    var chart = new ApexCharts(document.querySelector("#chart"), options);
+    chart.render();
+  </script>
+  </body>
+</html>
