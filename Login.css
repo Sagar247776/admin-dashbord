@@ -13,11 +13,11 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #363740;
-  margin: 5% 0%;
+  height: 100vh;
 }
 .container {
   background-color: white;
-  padding: 2%;
+  padding: 40px;
   border-radius: 10px;
   justify-content: center;
   text-align: center;
